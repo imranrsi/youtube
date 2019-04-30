@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+{% extends 'base.html' %}
+{% load myextras %}
+
+{% block title %}
+    home
+{% endblock %}
+
+{% block container %}
+    <div class="container">
+        <h1>this is home page</h1>
+        {{ insert|upper }}<br>
+
+        {{insert|mysupercut:"h"}}<br>
+
+        {{insert|addstring:"imran"}}<br>
+
+        {{ insert_num|add:"99" }}
+    </div>
+{% endblock %}

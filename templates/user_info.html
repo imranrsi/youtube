@@ -1,0 +1,28 @@
+{% extends 'home.html' %}
+
+{% block container %}
+    {% if user %}
+        <table class="table table-dark">
+  <thead>
+    <tr>
+
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+      <th scope="col">E-mail</th>
+    </tr>
+  </thead>
+  <tbody>
+  {% for u in user %}
+    <tr>
+
+      <td>{{u.first_name}}</td>
+      <td>{{u.last_name}}</td>
+      <td>{{u.email}}</td>
+    </tr>
+  {% endfor %}
+  </tbody>
+</table>
+    {% else %}
+        <p>No Data Found</p>
+    {% endif %}
+{% endblock %}

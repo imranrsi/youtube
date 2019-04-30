@@ -1,0 +1,26 @@
+{% extends 'home.html' %}
+
+{% load static %}
+
+{% block container %}
+
+    <h1>URL Name and Last Access Date</h1>
+    {% if a_r %}
+        <table>
+            <thead>
+                <th>Site Name</th>
+                <th>Access Date</th>
+            </thead>
+            {% for a in a_r %}
+
+                <tr>
+                    <td>{{a.name}}</td>
+                    <td>{{a.date}}</td>
+                </tr>
+            {% endfor %}
+
+            {% else %}
+            <p>No Data Found</p>
+    {% endif %}
+
+{% endblock %}
